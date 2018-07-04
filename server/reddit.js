@@ -12,6 +12,7 @@ router.get('/subreddit/:subreddit', (req, res) => {
       if (err) {
         res.status(500).send(err.message)
       } else {
+        // console.log(result.body.data.children)
         res.json(result.body.data.children)
       }
     })
